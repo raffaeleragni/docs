@@ -79,6 +79,7 @@ These are a set of headers and convention that will make API calls (service to s
 - response header (non-standard) `Response-Time` UNIX millisecs of the time of responding, calculated from server side. (`Date` header also exists but it is not a timestamp field)
 - response header `Server` containing an identifier of the service/module responding, ex `orders-tracking-1.3.2`
 - response header (non-standard) `Request-Id` 
+- proxy headers for response and request: `X-Forwarded-Request-Time` and `X-Forwarded-Response-Time`. They represent the same as above but seen by the proxy.
 
 Other behaviors include how the client and servers will behave when certain headers are used, and what is expected of them.
 
